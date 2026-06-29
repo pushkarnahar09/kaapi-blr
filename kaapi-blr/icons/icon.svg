@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#4D7C52"/>
+  <circle cx="256" cy="256" r="175" fill="none" stroke="#F7F3ED" stroke-width="12" opacity="0.2"/>
+  <!-- Cup body -->
+  <path d="M 176 310 L 336 310 L 316 392 Q 305 412 285 412 L 227 412 Q 207 412 196 392 Z" fill="#F7F3ED" opacity="0.96"/>
+  <rect x="176" y="286" width="160" height="28" rx="14" fill="#F7F3ED" opacity="0.96"/>
+  <!-- Handle -->
+  <path d="M 336 305 Q 390 305 390 352 Q 390 399 336 399" fill="none" stroke="#F7F3ED" stroke-width="22" stroke-linecap="round" opacity="0.96"/>
+  <!-- Steam wisps -->
+  <path d="M 218 270 Q 204 240 218 210 Q 232 180 218 150" fill="none" stroke="#F7F3ED" stroke-width="14" stroke-linecap="round" opacity="0.65"/>
+  <path d="M 256 270 Q 242 234 256 198 Q 270 162 256 126" fill="none" stroke="#F7F3ED" stroke-width="14" stroke-linecap="round" opacity="0.65"/>
+  <path d="M 294 270 Q 280 240 294 210 Q 308 180 294 150" fill="none" stroke="#F7F3ED" stroke-width="14" stroke-linecap="round" opacity="0.65"/>
+</svg>
