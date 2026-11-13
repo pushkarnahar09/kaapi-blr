@@ -1,6 +1,6 @@
 # 00. Executive Summary and Scope Challenge
 
-Status: Blueprint v0.1, awaiting founder review. No application code has been written.
+Status: Blueprint v0.1. Superseded in part by [22-decisions-v0.2.md](22-decisions-v0.2.md) (personal learning tool first, browser-only, ₹0 budget).
 Simulation start date: 13 November 2026 (Friday). Geography: Bengaluru, Karnataka. Currency: INR.
 
 ## 1. What we are building, in one paragraph

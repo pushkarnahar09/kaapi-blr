@@ -1,8 +1,8 @@
 # Venture Founder Simulator: Blueprint
 
-Status: **Blueprint v0.1, awaiting review and approval.** No application code yet, as required by section 32 of the master prompt (v2.0).
+Status: **Blueprint v0.2, approved for build.** Founder decisions are recorded in [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), which overrides earlier docs where they conflict. Build has started with the ledger core in `packages/ledger`.
 
-Start with [`docs/00-executive-summary-and-scope-challenge.md`](docs/00-executive-summary-and-scope-challenge.md). It sets out the recommended changes to scope, the stack, the build sequence and the five decisions needed before building.
+Read first: [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), then [`docs/00-executive-summary-and-scope-challenge.md`](docs/00-executive-summary-and-scope-challenge.md).
 
 | # | Document |
 |---|---|
@@ -28,6 +28,7 @@ Start with [`docs/00-executive-summary-and-scope-challenge.md`](docs/00-executiv
 | 19 | [Testing and reconciliation](docs/19-testing-and-reconciliation.md) |
 | 20 | [Assumptions and founder questions](docs/20-assumptions-and-founder-questions.md) |
 | 21 | [Risk register](docs/21-risk-register.md) |
+| 22 | [Decisions log v0.2](docs/22-decisions-v0.2.md) |
 
 ## Evidence note
 
