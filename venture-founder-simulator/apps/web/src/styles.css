@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* Layout concept: a founder's working ledger. Calm paper-like ground, ruled cards, one teal ink
+   accent; numbers set in mono so figures line up like a books of account. */
+:root {
+  --bg: #f4f6f4;
+  --surface: #ffffff;
+  --surface-2: #eef2f0;
+  --ink: #15201d;
+  --muted: #56645f;
+  --line: #d9e1dd;
+  --accent: #0d6b62;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcefea;
+  --good: #1f7a3d;
+  --good-soft: #e1f2e6;
+  --warn: #9a5208;
+  --warn-soft: #fbeedb;
+  --danger: #b4231b;
+  --danger-soft: #fbe4e2;
+  --ev-verified: #1f7a3d;
+  --ev-field: #0d6b62;
+  --ev-third: #2f5d9e;
+  --ev-user: #6b4fa0;
+  --ev-model: #9a5208;
+  --ev-unknown: #7b8784;
+  --focus: #0d6b62;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-figures: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1513;
+    --surface: #151e1b;
+    --surface-2: #1b2622;
+    --ink: #e5ecea;
+    --muted: #9aaba6;
+    --line: #2a3632;
+    --accent: #4fbcae;
+    --accent-ink: #072320;
+    --accent-soft: #163631;
+    --good: #6cc98b;
+    --good-soft: #17301f;
+    --warn: #e7a353;
+    --warn-soft: #3a2a14;
+    --danger: #f08a82;
+    --danger-soft: #3d1c1a;
+    --ev-verified: #6cc98b;
+    --ev-field: #4fbcae;
+    --ev-third: #86aee8;
+    --ev-user: #b9a0e6;
+    --ev-model: #e7a353;
+    --ev-unknown: #8d9a96;
+    --focus: #4fbcae;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e1513;
+  --surface: #151e1b;
+  --surface-2: #1b2622;
+  --ink: #e5ecea;
+  --muted: #9aaba6;
+  --line: #2a3632;
+  --accent: #4fbcae;
+  --accent-ink: #072320;
+  --accent-soft: #163631;
+  --good: #6cc98b;
+  --good-soft: #17301f;
+  --warn: #e7a353;
+  --warn-soft: #3a2a14;
+  --danger: #f08a82;
+  --danger-soft: #3d1c1a;
+  --ev-verified: #6cc98b;
+  --ev-field: #4fbcae;
+  --ev-third: #86aee8;
+  --ev-user: #b9a0e6;
+  --ev-model: #e7a353;
+  --ev-unknown: #8d9a96;
+  --focus: #4fbcae;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-figures);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--surface);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+.figures {
+  font-family: var(--font-figures);
+  font-variant-numeric: tabular-nums;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+input[type="range"] {
+  accent-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

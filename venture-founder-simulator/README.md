@@ -1,6 +1,6 @@
 # Venture Founder Simulator: Blueprint
 
-Status: **Blueprint v0.2, approved for build.** Founder decisions are recorded in [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), which overrides earlier docs where they conflict. Built so far: `packages/ledger` (accounting core), `packages/engine-core` (simulation clock, randomness, replay) and `packages/cash` (13-week cash forecast). Run `pnpm install && pnpm test` in this folder.
+Status: **Blueprint v0.2, approved for build.** Founder decisions are recorded in [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), which overrides earlier docs where they conflict. Built so far: `packages/ledger` (accounting core), `packages/engine-core` (simulation clock, randomness, replay) `packages/cash` (13-week cash forecast), `packages/discovery` (founder profile, industry research cards, opportunity scoring, Action Centre), `packages/learning` (glossary and explanations) and `apps/web` (the browser app). Run `pnpm install && pnpm test` in this folder; build the app with `pnpm --filter @vfs/web build`.
 
 Read first: [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), then [`docs/00-executive-summary-and-scope-challenge.md`](docs/00-executive-summary-and-scope-challenge.md).
 

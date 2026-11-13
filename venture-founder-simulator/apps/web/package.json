@@ -1,0 +1,25 @@
+{
+  "name": "@vfs/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && node scripts/make-artifact.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "echo 'web: covered by package tests and the screenshot check'"
+  },
+  "dependencies": {
+    "@vfs/discovery": "workspace:*",
+    "@vfs/learning": "workspace:*",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.10",
+    "@types/react": "18.3.23",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "4.5.2",
+    "tailwindcss": "4.1.10",
+    "vite": "6.3.5"
+  }
+}
