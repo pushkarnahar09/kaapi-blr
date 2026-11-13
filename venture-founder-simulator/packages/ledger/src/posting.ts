@@ -250,10 +250,18 @@ export function toJournal(e: BusinessEvent): JournalDraft {
 }
 
 /**
- * Month-end GST: use input credit against output liability head by head, pay the rest from bank.
+ * GST return payment: for the period ending `periodEnd`, use input credit against output liability
+ * head by head and pay the rest from bank on `date`. Assumes earlier periods are already settled.
  * Unused credit carries forward. Cross-utilisation rules (IGST order etc.) arrive with tax-in.
  */
-export function gstSettlement(ledger: Ledger, date: SimDate, lateInterest: Paise = 0n): JournalDraft | null {
+export function gstSettlement(
+  ledger: Ledger,
+  date: SimDate,
+  options: { /** Last day of the tax period being settled; defaults to `date`. */ periodEnd?: SimDate; lateInterest?: Paise } = {},
+): JournalDraft | null {
+  const periodEnd = options.periodEnd ?? date;
+  const lateInterest = options.lateInterest ?? 0n;
+  if (periodEnd > date) throw new Error(`Cannot settle period ending ${periodEnd} on an earlier date ${date}`);
   const heads = [
     { input: A.INPUT_CGST, output: A.OUTPUT_CGST },
     { input: A.INPUT_SGST, output: A.OUTPUT_SGST },
@@ -261,8 +269,8 @@ export function gstSettlement(ledger: Ledger, date: SimDate, lateInterest: Paise
   const lines: JournalLine[] = [];
   let cash = 0n;
   for (const h of heads) {
-    const credit = ledger.debitBalance(h.input, date); // asset: debit positive
-    const liability = -ledger.debitBalance(h.output, date); // liability: credit positive
+    const credit = ledger.debitBalance(h.input, periodEnd); // asset: debit positive
+    const liability = -ledger.debitBalance(h.output, periodEnd); // liability: credit positive
     if (liability <= 0n) continue;
     const used = credit > 0n ? (credit < liability ? credit : liability) : 0n;
     lines.push(dr(h.output, liability));

@@ -74,10 +74,10 @@ Unchanged: the pure TypeScript engine, integer-paise money, double-entry ledger,
 
 | Step | What | Status |
 |---|---|---|
-| 1 | Ledger and money core with reconciliation tests | **Started in this session** |
-| 2 | Simulation clock, seeded randomness, decision and event logs, replay | Next |
-| 3 | Cash engine: settlement queue, 13-week forecast | |
-| 4 | Browser app shell, founder profile, Opportunity Radar, "Explain this" | |
+| 1 | Ledger and money core with reconciliation tests | Done (`packages/ledger`) |
+| 2 | Simulation clock, seeded randomness, decision and event logs, replay | Done (`packages/engine-core`) |
+| 3 | Cash engine: settlement queue, 13-week forecast | Done (`packages/cash`) |
+| 4 | Browser app shell, founder profile, Opportunity Radar, "Explain this" | Next |
 | 5 | Cafe plugin and a full playable cafe journey | |
 | 6 | 24-month projections, tax calendar | |
 | 7 | Learning layer: concept cards, competency evidence, readiness report | |

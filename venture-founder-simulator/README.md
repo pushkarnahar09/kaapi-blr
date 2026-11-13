@@ -1,6 +1,6 @@
 # Venture Founder Simulator: Blueprint
 
-Status: **Blueprint v0.2, approved for build.** Founder decisions are recorded in [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), which overrides earlier docs where they conflict. Build has started with the ledger core in `packages/ledger`.
+Status: **Blueprint v0.2, approved for build.** Founder decisions are recorded in [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), which overrides earlier docs where they conflict. Built so far: `packages/ledger` (accounting core), `packages/engine-core` (simulation clock, randomness, replay) and `packages/cash` (13-week cash forecast). Run `pnpm install && pnpm test` in this folder.
 
 Read first: [`docs/22-decisions-v0.2.md`](docs/22-decisions-v0.2.md), then [`docs/00-executive-summary-and-scope-challenge.md`](docs/00-executive-summary-and-scope-challenge.md).
 
